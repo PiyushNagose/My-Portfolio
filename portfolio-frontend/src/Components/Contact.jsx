@@ -31,7 +31,7 @@ export default function Contact() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/contact",
+        "https://my-portfolio-backend-x15a.onrender.com/contact",
         formData
       );
       setSuccess(true);
