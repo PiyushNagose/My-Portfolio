@@ -6,6 +6,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { motion } from "framer-motion";
 import axios from "axios";
+import API_URL from "../environment";
 
 const accentColor = "#ffb703";
 
@@ -30,10 +31,7 @@ export default function Contact() {
     setSuccess(false);
 
     try {
-      const response = await axios.post(
-        "https://my-portfolio-backend-x15a.onrender.com/contact",
-        formData
-      );
+      const response = await axios.post(`${API_URL}/contact`, formData);
       setSuccess(true);
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
