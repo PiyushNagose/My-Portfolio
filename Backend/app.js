@@ -7,7 +7,13 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://my-portfolio-frontend-v5kh.onrender.com",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 const resend = new Resend(process.env.RESEND_API_KEY);
