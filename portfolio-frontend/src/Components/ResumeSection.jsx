@@ -90,7 +90,7 @@ export default function ResumeSection() {
                     border: `1px solid #00f6ff33`,
                     borderRadius: "16px",
                     padding: "15px",
-                    height: "100%", 
+                    height: "100%",
                     display: "flex",
                     flexDirection: "column",
                   }}
@@ -124,7 +124,7 @@ export default function ResumeSection() {
           style={{ textAlign: "center" }}
         >
           <Button
-            href="/Piyush_Nagose_Resume.pdf"
+            href="\PIYUSH_RESUME.pdf"
             download
             variant="contained"
             sx={{
